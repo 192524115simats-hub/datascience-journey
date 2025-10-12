@@ -1,0 +1,32 @@
+1.to swap numbers without using temp variable
+a,b=5,10
+a,b=b,a
+print(a,b)
+OUTPUT
+10,5
+
+2.TO CHECK ODD OR EVEN
+a=int(input("enter the number:"))
+if(a%2!=0):
+    print(f" {a} is odd number")
+else:
+    print(f"{a} is even number")
+OUTPUT
+ enter the number=5
+ 5 is odd number
+    
+3.TO FIND THE RADIUS OF CIRCLE
+pi=3.14
+rad=20
+area=pi*rad**2
+print("the area of the circle",area)
+OUTPUT
+the area of the circle 1256.0
+
+4.convert celsius into fahranheit
+celsius=int(input("enter the number:"))
+fahranheit=(celsius*1.8)+32
+print(f"the {celsius} is converted to {fahranheit}")
+OUTPUT
+enter the number:32
+the 32 is converted to 89.6
