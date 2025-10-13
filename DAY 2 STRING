@@ -1,0 +1,33 @@
+1.to replace single line
+ch="c++ program is the easiest language"
+ch=ch.replace('c++','python')
+print("the single replaced line:",ch)
+OUTPUT
+the single replaced line:python is the easiest language
+
+2.to check palindrome
+s="madam"
+if s==s[::-1]:
+      print("it is pallindrome")
+else:
+    print("it is not pallindrome")
+OUTPUT
+it is pallindrome
+
+3.to remove punctuation
+word="oh my god!!!"
+word=word.replace('!!!'," ")
+print(word)
+OUTPUT
+oh my god
+
+4.to count vowels in word
+word="telephone"
+vowels="aeiouAeiou"
+count=0
+for ch in word:
+    if ch in vowels:
+        count+=1
+print(count)
+OUTPUT
+4
