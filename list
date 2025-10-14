@@ -1,0 +1,43 @@
+1.TO FIND SUM OF LIST
+l1=[1,2,3,4,5]
+l2=0
+for i in l1:
+    l2=l2+i
+print(l2)
+OUTPUT
+15
+
+2.TO FIND MAXIMUM AND MINIMUM
+l1=[1,3,5,2]
+max=0
+min=5
+for i in l1:
+    if (max<i):
+      max=i
+print(max)
+for i in l1:
+    if(min>i):
+        min=i
+print(min)
+OUTPUT
+5
+1
+
+3.To ascend and descend the list
+l1=[2,1,3,4]
+l1.sort()
+print(l1)
+l2=[1,3,5,4]
+l2.sort(reverse==true)
+print(l2)
+OUTPUT
+1,2,3,4
+4,5,3,1
+
+4.to insert and remove the list
+l1=["apple","mango","orange"}
+l1.remove(mango)
+l1.insert(3,mango)
+print(l1)
+OUTPUT
+apple,orange,mango
