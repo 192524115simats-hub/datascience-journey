@@ -26,5 +26,28 @@ print(df.rename(index={'loc_a':'category'}))
 .drop(colums,index)->deletes specific rows or columns that you explicitly name
 .fillna->no c,i,s
 
+.DROPNA(HOW='all',any) all->every single column in a roew is null any->any nan value axis=0,1 index,column 
+thresh->if given then exceeds nan values mean delete in row
+df_thresh = df.dropna(thresh=3)
+
+print(df.dropna(subset=['Item','Price'],how='any'))
+print(df.dropna(subset='Quantity',inplace=True))
+
+
+
+
+
+
+
+
+
+.fillna()->to assign columns use dictionary
+solution = df.fillna({ 'Customer_Name': 'Anonymous', 'Item': 'Promo Item'})
+q4_solution['Quantity'] = q4_solution['Quantity'].ffill()
+# Question 5: Replace missing Price values with 0 directly in place
+df['Price'].fillna(0, inplace=True)
+
+
+
 
 
