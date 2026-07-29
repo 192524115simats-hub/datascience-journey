@@ -1,0 +1,30 @@
+.value_counts()
+1.to count gender
+print(df['gender'].counts())
+note:By default, value_counts() completely ignores missing values (NaN). (we use dropna=False) 
+to get percentages, you need to use the normalize=True parameter inside value_counts().
+df['region'].value_counts(normalize=True) * 100 (*100 make 0.40=40)
+2. how to combine percentages with missing data
+print(df['region'].value_counts(dropna=False,normalize=True)*100)
+
+.sort_values=()
+1.Sort a DataFrame by a single date column in descending order.
+print(df.sort_values(by=['joining_date'],ascending=False))
+2.Sort the DataFrame by revenue in ascending order, but make sure any rows containing missing data (NaN) in that column are forced to the very top
+#to  na_position='first' parameter to or can be last
+print(df.sort_values(by='gender',na_position='first',ascending=True))
+
+.sort_index()
+print(df['style'].sort_index())
+
+.rename()
+print(df.rename(columns={'product_category':'category'}))
+print(df.rename(index={'loc_a':'category'}))
+
+.dropna(subset) ->Deletes rows or columns that contain missing values (NaN) defaultly delete rows
+.drop_duplicate(subset)->drop duplicate and keep first one
+.drop(colums,index)->deletes specific rows or columns that you explicitly name
+.fillna->no c,i,s
+
+
+
