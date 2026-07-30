@@ -34,18 +34,28 @@ print(df.dropna(subset='Quantity',inplace=True))
 
 .drop_duplicates()->keep='first' or last keep the occurence
 
-
-
-
-
-
-
-
 .fillna()->to assign columns use dictionary
 solution = df.fillna({ 'Customer_Name': 'Anonymous', 'Item': 'Promo Item'})
 q4_solution['Quantity'] = q4_solution['Quantity'].ffill()
 # Question 5: Replace missing Price values with 0 directly in place
 df['Price'].fillna(0, inplace=True)
+
+>isin()
+ech_sales_df = df[df['Department'].isin(['Tech', 'Sales'])]
+
+GROUPBY->transform() gives individual marks like mean sum
+# This keeps INDIVIDUALS and matches their rows
+5.print(df.groupby('Team')['Chocolates'].transform('mean')) output->alice 14 ven=14
+6.print(df.groupby('Store')['Sales'].sum())
+#get_gruop ->fetch specific data in tuple
+# Grouping by two columns
+double_grouped = df.groupby(['Department', 'Employee']('Salary).mean())
+# Fetching a specific combination
+specific_user = double_grouped.get_group(('HR', 'Alice'))
+
+
+
+
 
 
 
