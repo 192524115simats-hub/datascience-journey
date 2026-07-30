@@ -29,10 +29,10 @@ print(df.rename(index={'loc_a':'category'}))
 .DROPNA(HOW='all',any) all->every single column in a roew is null any->any nan value axis=0,1 index,column 
 thresh->if given then exceeds nan values mean delete in row
 df_thresh = df.dropna(thresh=3)
-
 print(df.dropna(subset=['Item','Price'],how='any'))
 print(df.dropna(subset='Quantity',inplace=True))
 
+.drop_duplicates()->keep='first' or last keep the occurence
 
 
 
