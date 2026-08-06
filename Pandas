@@ -53,6 +53,43 @@ double_grouped = df.groupby(['Department', 'Employee']('Salary).mean())
 # Fetching a specific combination
 specific_user = double_grouped.get_group(('HR', 'Alice'))
 
+DATE:06.08.26
+#multiindexing
+standard data columns into a MultiIndex using .set_index()
+df.set_index(['Group','Country])
+idx = pd.IndexSlice
+df.loc[idx[Level1_Choice, Level2_Choice], Columns]->we can also use slicing [:,:,]:]
+#xs
+df.xs(key, level=none, drop_level=True)->drop_level=True default it doesnt show that thing only,level is desired index
+key=in the specific desired index
+df_multi.loc[idx['2024':'2025', 'Q2'], :]
+
+#using groupby(leel=0) or(level='index_name)
+df_multi.groupby(level=0).sum()  # 0 targets 'Year', 1 would target 'Quarter'
+df_multi.groupby(level=['Year', 'Quarter']).mean()
+
+# Assuming 'Discount_Applied' is a column, and 'Year' is an index level
+df_multi.groupby(['Year', 'Discount_Applied']).sum()
+
+2.VECTORIZED OPERATION
+Vectorized operations are calculations performed on entire arrays or data column without uaing loop
+df['Final_Price'] = df['Base Price'] * (1 - df['Discount_Pct'])->1- need to be utside
+1.# Standard index bracket style
+df['Product_Code'].str.split('-').str[1]
+
+# Alternative method call style
+df['Product_Code'].str.split('-').str.get(1)
+his splits the string into columns immediately, allowing you to select column 1 with standard brackets:
+df['Product_Code'].str.split('-', expand=True)[1]
+
+
+
+
+
+
+
+
+
 
 
 
