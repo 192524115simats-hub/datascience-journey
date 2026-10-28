@@ -81,6 +81,7 @@ df['Product_Code'].str.split('-').str[1]
 df['Product_Code'].str.split('-').str.get(1)
 his splits the string into columns immediately, allowing you to select column 1 with standard brackets:
 df['Product_Code'].str.split('-', expand=True)[1]
+4. Testing out merge conflicts
 
 
 
